@@ -1,0 +1,42 @@
+과제명: 여행 소비 고지출자 예측 서비스 구현 (시·도 선호지역 정보 추가)
+(Streamlit + FastAPI 연동)
+
+과제 설명
+기존 여행 소비 고지출자 예측 프로젝트에 TRAVEL_LIKE_SIDO_1 + TRAVEL_LIKE_SGG_1 컬럼을 추가하여,
+데이터 전처리 → 모델 학습 → 예측 UI 도구 제작까지의 전체 과정을 수행하세요.
+
+사용 데이터셋
+- 제공된 CSV 파일 **tn_traveller_master_with_total_top20.csv**를 사용하세요.
+- 타깃 컬럼은 **top20_spender**입니다.
+
+수행 단계
+1. TRAVEL_LIKE_SIDO_1 + TRAVEL_LIKE_SGG_1 컬럼을 포함하여 데이터 전처리를 수행하세요.
+
+2. 범주형 변수에 대해 One-Hot Encoding을 적용하세요.
+
+3. 데이터를 Train / Validation / Test로 분리하세요.
+
+4. 수치형 변수에 대해 StandardScaler를 적용하세요.
+
+5. 로지스틱 회귀 모델을 학습하고 저장하세요.
+
+6. FastAPI 기반 예측 API를 구현하세요.
+
+7. Streamlit 기반 UI를 구성하여 예측 결과를 확인할 수 있도록 하세요.
+
+결과 요구사항
+- UI 화면에 다음 정보를 출력하세요.
+- 고지출자 예측 결과(label)
+- 고지출자 예측 확률(probability)
+- 기존 선택 사항들 + TRAVEL_LIKE_SIDO_1 선택 박스 + TRAVEL_LIKE_SGG_1 선택 박스
+
+제출 자료 
+- 아래 파일을 하나의 폴더로 구성한 후 ZIP 파일로 압축하여 제출하세요.
+- 파일명: 이름_프로젝트.zip
+- 필수 포함 파일
+- train.py 또는 train.ipynb : 전처리 및 모델 학습
+- server.py : FastAPI 예측 서버
+- app.py : Streamlit UI
+
+ 
+
